@@ -1,5 +1,5 @@
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "/api";
 const ADMIN_TOKEN_KEY = "novamarket-admin-token";
 const token = localStorage.getItem(ADMIN_TOKEN_KEY);
 

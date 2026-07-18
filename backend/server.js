@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 const express = require("express");
+const path = require("path");
 const cors = require("cors");
 
 const connectDB = require("./config/db");
@@ -13,6 +14,9 @@ const app = express();
 
 app.use(cors());
 app.use(express.json({ limit: "1mb" }));
+
+// Serve static frontend files (HTML, CSS, JS, images)
+app.use(express.static(path.join(__dirname, "..")));
 
 app.get("/", (req, res) => {
     res.json({
