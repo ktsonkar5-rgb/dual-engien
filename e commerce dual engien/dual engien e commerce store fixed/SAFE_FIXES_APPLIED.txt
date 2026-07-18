@@ -1,0 +1,10 @@
+NOVA MARKET SAFE FIXES
+========================
+
+Only the following were changed:
+1. Cart localStorage parsing is now safe against corrupted data.
+2. Cart empty state now hides when products exist and shows when the cart is empty.
+3. Cart quantity values are normalized safely.
+4. No existing feature was removed.
+5. Admin login files and authentication flow were not changed.
+6. Store switching, brands, wishlist, search, carousel, FAQ, checkout, and admin dashboard were preserved.

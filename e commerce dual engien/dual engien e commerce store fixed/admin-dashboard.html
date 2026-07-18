@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NOVA MARKET | Admin Dashboard</title>
+
+    <link rel="stylesheet" href="admin-dashboard.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="admin-logo">
+
+                <div class="logo-icon">
+                    N
+                </div>
+
+                <div>
+
+                    <strong>NOVA</strong>
+
+                    <span>MARKET ADMIN</span>
+
+                </div>
+
+            </div>
+
+
+            <nav class="admin-nav">
+
+                <a href="#" class="active">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    Dashboard
+
+                </a>
+
+
+                <a href="#productsSection">
+
+                    <i class="fa-solid fa-box"></i>
+
+                    Products
+
+                </a>
+
+
+                <a href="#addProductSection">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Product
+
+                </a>
+
+            </nav>
+
+
+            <button
+                class="logout-btn"
+                onclick="logoutAdmin()">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="admin-main">
+
+
+            <!-- TOPBAR -->
+
+            <header class="admin-topbar">
+
+                <div>
+
+                    <h1>
+                        Admin Dashboard
+                    </h1>
+
+                    <p>
+                        Manage your NOVA MARKET products
+                    </p>
+
+                </div>
+
+
+                <div class="admin-user">
+
+                    <div class="admin-avatar">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <span>
+                        Administrator
+                    </span>
+
+                </div>
+
+            </header>
+
+
+            <!-- STATISTICS -->
+
+            <section class="stats-grid">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon products-icon">
+
+                        <i class="fa-solid fa-box"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Products
+                        </span>
+
+                        <strong id="totalProducts">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon electronics-icon">
+
+                        <i class="fa-solid fa-mobile-screen"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Electronics
+                        </span>
+
+                        <strong id="electronicsProducts">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon riding-icon">
+
+                        <i class="fa-solid fa-motorcycle"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Riding Gear
+                        </span>
+
+                        <strong id="ridingProducts">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ADD PRODUCT -->
+
+           <section class="admin-section" id="addProductSection">
+
+    <div class="section-heading">
+
+        <span>PRODUCT MANAGEMENT</span>
+
+        <h2>Add New Product</h2>
+
+    </div>
+
+
+    <form id="productForm" class="product-form">
+
+        <div class="form-grid">
+
+
+            <div class="form-group">
+
+                <label>Product Name</label>
+
+                <input
+
+                    type="text"
+
+                    id="productName"
+
+                    required
+
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Brand</label>
+
+                <input
+
+                    type="text"
+
+                    id="productBrand"
+
+                    placeholder="Apple, Samsung, Studds..."
+
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Model</label>
+
+                <input
+
+                    type="text"
+
+                    id="productModel"
+
+                    placeholder="iPhone 13, SM-A525F..."
+
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Price</label>
+
+                <input
+
+                    type="number"
+
+                    id="productPrice"
+
+                    required
+
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Category</label>
+
+                <input
+
+                    type="text"
+
+                    id="productCategory"
+
+                    placeholder="Smartphones, Helmets..."
+
+                    required
+
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Store</label>
+
+                <select id="productStore">
+
+                    <option value="electronics">
+
+                        Electronics
+
+                    </option>
+
+
+                    <option value="riding">
+
+                        Riding Gear
+
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group full-width">
+
+                <label>Product Image URL</label>
+
+                <input
+
+                    type="url"
+
+                    id="productImage"
+
+                    placeholder="https://example.com/product.jpg"
+
+                    required
+
+                >
+
+            </div>
+
+
+            <div class="form-group full-width">
+
+                <label>Search Keywords</label>
+
+                <input
+
+                    type="text"
+
+                    id="productKeywords"
+
+                    placeholder="iphone apple smartphone ios camera"
+
+                >
+
+                <small>
+
+                    Add keywords separated by spaces
+
+                </small>
+
+            </div>
+
+
+            <div class="form-group full-width">
+
+                <label>Description</label>
+
+                <textarea
+
+                    id="productDescription"
+
+                    rows="5"
+
+                ></textarea>
+
+            </div>
+
+
+            <div class="checkbox-group">
+
+                <label>
+
+                    <input
+
+                        type="checkbox"
+
+                        id="productFeatured"
+
+                    >
+
+                    Featured Product
+
+                </label>
+
+
+                <label>
+
+                    <input
+
+                        type="checkbox"
+
+                        id="productInStock"
+
+                        checked
+
+                    >
+
+                    In Stock
+
+                </label>
+
+            </div>
+
+
+        </div>
+
+
+        <button
+
+            type="submit"
+
+            class="admin-primary-btn"
+
+        >
+
+            <i class="fa-solid fa-plus"></i>
+
+            Add Product
+
+        </button>
+
+
+        <p
+
+            id="productMessage"
+
+            class="product-message"
+
+        ></p>
+
+
+    </form>
+
+</section>
+
+
+            <!-- PRODUCTS -->
+
+            <section class="admin-section" id="productsSection">
+
+    <div class="section-heading">
+
+        <span>INVENTORY</span>
+
+        <h2>All Products</h2>
+
+    </div>
+
+
+    <div class="admin-table-wrapper">
+
+        <table class="admin-product-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Image</th>
+
+                    <th>Product</th>
+
+                    <th>Category</th>
+
+                    <th>Store</th>
+
+                    <th>Price</th>
+
+                    <th>Featured</th>
+
+                    <th>Stock</th>
+
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="adminProductTable">
+
+                <tr>
+
+                    <td colspan="8">
+
+                        Loading products...
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="admin-dashboard.js"></script>
+
+</body>
+
+</html>

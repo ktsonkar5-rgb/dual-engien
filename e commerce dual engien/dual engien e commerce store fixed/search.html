@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Search Products | NOVA MARKET</title>
+
+    <meta
+        name="description"
+        content="Search smartphones, laptops, gadgets, riding gear and accessories at NOVA MARKET."
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/search.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="search-header">
+
+        <a
+            href="index.html"
+            class="search-logo"
+        >
+
+            NOVA<span>MARKET</span>
+
+        </a>
+
+
+        <a
+            href="index.html"
+            class="back-store"
+        >
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Store
+
+        </a>
+
+    </header>
+
+
+
+    <!-- SEARCH HERO -->
+
+    <section class="search-hero">
+
+        <span class="search-eyebrow">
+
+            NOVA MARKET SEARCH
+
+        </span>
+
+
+        <h1>
+
+            Find Your
+
+            <span>
+
+                Perfect Product
+
+            </span>
+
+        </h1>
+
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+
+            <input
+
+                type="search"
+
+                id="searchInput"
+
+                placeholder="Search iPhone, laptop, helmet, accessories..."
+
+                autocomplete="off"
+
+            >
+
+
+            <button
+
+                id="searchButton"
+
+            >
+
+                Search
+
+            </button>
+
+        </div>
+
+
+        <div class="search-suggestions">
+
+            <span>Popular:</span>
+
+
+            <button data-search="iPhone">
+
+                iPhone
+
+            </button>
+
+
+            <button data-search="Laptop">
+
+                Laptop
+
+            </button>
+
+
+            <button data-search="Helmet">
+
+                Helmet
+
+            </button>
+
+
+            <button data-search="Accessories">
+
+                Accessories
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- RESULTS -->
+
+    <main class="search-main">
+
+        <div class="results-top">
+
+            <div>
+
+                <span class="results-label">
+
+                    SEARCH RESULTS
+
+                </span>
+
+
+                <h2 id="resultsTitle">
+
+                    All Products
+
+                </h2>
+
+            </div>
+
+
+            <span
+
+                id="resultsCount"
+
+                class="results-count"
+
+            >
+
+                0 products
+
+            </span>
+
+        </div>
+
+
+        <div
+
+            id="searchResults"
+
+            class="search-results"
+
+        >
+
+            <div class="search-loading">
+
+                <i class="fa-solid fa-spinner fa-spin"></i>
+
+                <p>
+
+                    Loading products...
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="search-footer">
+
+        <p>
+
+            © 2026 NOVA MARKET. All rights reserved.
+
+        </p>
+
+    </footer>
+
+
+
+    <script src="js/search.js"></script>
+
+</body>
+
+</html>
